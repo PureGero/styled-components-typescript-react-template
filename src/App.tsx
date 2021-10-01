@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import AppLogo from './AppLogo';
 
 const AppContainer = styled.div`
   text-align: center;
@@ -15,24 +16,6 @@ const AppHeader = styled.header`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-`;
-
-const appLogoSpin = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-const AppLogo = styled.img`
-  height: 40vmin;
-  pointer-events: none;
-
-  @media (prefers-reduced-motion: no-preference) {
-    animation: ${appLogoSpin} infinite 20s linear;
-  }
 `;
 
 const AppLink = styled.a`
