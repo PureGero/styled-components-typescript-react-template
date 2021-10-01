@@ -2,14 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends React.Component {
+interface AppProps {
+  name: string;
+}
+
+class App extends React.Component<AppProps> {
   render() {  
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.tsx</code> and save to reload!
+            Edit <code>{this.props.name}</code> and save to reload!
           </p>
           <a
             className="App-link"
